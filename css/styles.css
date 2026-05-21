@@ -1810,6 +1810,10 @@ section {
   .hero-grid { grid-template-columns: 1fr; }
   .hero-meta { display: none; }
   .intro-grid { grid-template-columns: 1fr; gap: 3rem; }
+   /* Contact page: on mobile/tablet, surface the quote form before the intro/info column */
+  #quote .intro-grid { display: flex; flex-direction: column; }
+  #quote .intro-grid > .intro-text { order: 2; }
+  #quote .intro-grid > .reveal:not(.intro-text) { order: 1; }
   .whyus-grid { grid-template-columns: 1fr; }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
   .industries-grid { grid-template-columns: repeat(2, 1fr); }
